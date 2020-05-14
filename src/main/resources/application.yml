@@ -1,0 +1,3 @@
+spring.data.mongodb:
+  database: user
+  uri: mongodb://mongo:27017

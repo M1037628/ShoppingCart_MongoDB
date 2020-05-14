@@ -1,0 +1,20 @@
+version: "2"
+services: 
+  mongo: 
+    image: mongo
+    container_name: mongo
+    volumes: 
+      - ./_data:/data/db
+    ports:
+      - 27017:27017
+
+  spring-boot-mongodb-example:
+    image: kaarthickkannan/springmongoexample
+    container_name: springmongo 
+    ports:
+      - 8080:8080
+    links:
+      - mongo       
+
+  
+  
